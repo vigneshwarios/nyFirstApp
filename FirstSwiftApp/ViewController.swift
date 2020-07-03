@@ -11,21 +11,25 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var companyNameLabel: UILabel!
-    var tapCount = 0
+
+
+  
+    @IBOutlet weak var text1: UITextField!
+    @IBOutlet weak var text2: UITextField!
 
     @IBAction func buttonTapped(_ sender: AnyObject) {
-        companyNameLabel.text = "AmVi"
-        tapCount = tapCount+1
-        print("Button Tapped")
-        print(tapCount)
-        if(tapCount >= 10){
-            companyNameLabel.text = "You tapped the button 10 times"
-        }
+      // print(text1)
+       print(text1.text!)
+       print(text2.text!)
+        
+//companyNameLabel.text=String(Double(text1.text!)! + Double(text2.text!)!)
+      //  companyNameLabel.text="\(Double(text1.text!)! + Double(text2.text!)!)"
+         companyNameLabel.text="Answer is: \(Double(text1.text!)! + Double(text2.text!)!)"
         
     }
     
     @IBAction func buttonCoolTapped(_ sender: AnyObject) {
-       companyNameLabel.text = "Buttons Are Cool!"
+       //companyNameLabel.text = "Buttons Are Cool!"
     }
     
     
